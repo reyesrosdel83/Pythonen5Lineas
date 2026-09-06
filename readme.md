@@ -43,9 +43,11 @@ for tam, ruta in archivos[:10]: print(f"{tam/1024/1024:.1f} MB - {os.path.basena
 from PIL import Image
 from pathlib import Path
 
-imagenes = [Image.open(f).convert("RGB") for f in Path('.').glob('*.jpg')]
-imagenes[0].save("documento.pdf", save_all=True, append_images=imagenes[1:])
-print("PDF creado!")
+> Convierte 100 imágenes JPG a un solo PDF en 2 segundos con 5 líneas de Python. Sin páginas con virus ni marcas de agua.
+
+**Instalación:**
+```bash
+pip install pillow
 
 ### ▶️ Requisitos
 - Tener Python instalado (python.org)
