@@ -39,6 +39,14 @@ carpeta = str(Path.home() / "Downloads")
 archivos = sorted([(os.path.getsize(os.path.join(r,f)), os.path.join(r,f)) for r,_,fs in os.walk(carpeta) for f in fs], reverse=True)
 for tam, ruta in archivos[:10]: print(f"{tam/1024/1024:.1f} MB - {os.path.basename(ruta)}")
 
+### 📄 Video #3 - 100 JPG → 1 PDF en 5 líneas
+from PIL import Image
+from pathlib import Path
+
+imagenes = [Image.open(f).convert("RGB") for f in Path('.').glob('*.jpg')]
+imagenes[0].save("documento.pdf", save_all=True, append_images=imagenes[1:])
+print("PDF creado!")
+
 ### ▶️ Requisitos
 - Tener Python instalado (python.org)
 
