@@ -1,0 +1,5 @@
+TODO_JUNTO.xlsx
+*.xlsx
+__pycache__/
+venv/
+.pytest_cache/
