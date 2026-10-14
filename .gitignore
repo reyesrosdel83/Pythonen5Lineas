@@ -1,7 +1,61 @@
-TODO_JUNTO.xlsx
-*.xlsx
+gitignore
+# --- Python ---
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.pyo
+dist/
+build/
+*.egg-info/
+*.egg
+.eggs/
 venv/
-.pytest_cache/
-*.exe
-10excel_a_uno/
+env/
+ENV/
+.venv/
+*.env
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Sistema Operativo ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Tus Proyectos - Archivos de prueba y resultados ---
+# No subir archivos pesados de prueba
+*.pdf
+*.xlsx
+*.xls
+*.csv
+*.jpg
+*.jpeg
+*.png
+
+# Excepciones: Si quieres mantener un ejemplo pequeño en cada carpeta, crea una carpeta /ejemplos
+!**/ejemplos/*.pdf
+!**/ejemplos/*.xlsx
+!**/ejemplos/*.jpg
+
+# Carpetas de salida que generan tus scripts
+/output/
+/resultados/
+/organizados/
+/combinados/
+TEMP/
+temp/
+
+# Archivos de tu proyecto ARCHIVOS PESADOS y ORGANIZAR CARPETAS
+*.log
+*.tmp
+
+# Dependencias
+requirements.txt
